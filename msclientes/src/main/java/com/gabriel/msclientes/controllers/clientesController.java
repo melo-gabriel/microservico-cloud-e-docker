@@ -15,16 +15,19 @@ import com.gabriel.msclientes.DTO.ClientesDTO;
 import com.gabriel.msclientes.services.ClientesService;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/clientes")
 @RequiredArgsConstructor
+@Slf4j
 public class clientesController {
 	
 	private final ClientesService clientesService;
 	
 	@GetMapping
 	public String status(){
+		log.info("obtendo o status de microservico de cliente");
 		return "ok";
 	}
 		
